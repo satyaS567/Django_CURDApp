@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create|CurdApp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg bg-info">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">CurdApp|Create</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/create">Create</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Features
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/">Create</a></li>
+                      <li><a class="dropdown-item" href="/">Update</a></li>
+                      <li><a class="dropdown-item" href="/">Delete</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Search</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search" action="/search" method="post">
+                  {% csrf_token %}
+                  <input class="form-control me-2" type="search" name="query" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </div>
+    <div class="py-4 container">
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="exampleInputtext1" class="form-label">Name</label>
+                <input type="text" class="form-control" id="" name="name" aria-describedby="textHelp">
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Department</label>
+                <input type="text" class="form-control" id="" name="department" aria-describedby="textHelp">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputtext1" class="form-label">Desgination</label>
+                <input type="text" class="form-control" id="exampleInputtext1" name="desgination" aria-describedby="textHelp">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
+              </div>
+            <div class="mb-3">
+              <label for="exampleInputnumber1" class="form-label">PhoneNo</label>
+              <input type="number" class="form-control" id="exampleInputnumber1" name="phone">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputnumber1" class="form-label">DateOfJoin</label>
+                <input type="date" class="form-control" id="exampleInputdate1" name="dateofjoin">
+              </div>
+            <button type="submit" class="btn btn-primary">Create</button>
+          </form>
+    </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
