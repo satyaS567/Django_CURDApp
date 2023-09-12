@@ -1,4 +1,4 @@
-# django_curdapp
+# django_crudapp
 Curdapp is a web application built using Django, Bootstrap 5, and SQLite3 that allows users to perform CRUD (Create, Read, Update, Delete) operations on a simple database. Key Features:
 
 User Authentication and Access Control: Curdapp incorporates user authentication, allowing users to register, log in, and log out securely. Different user roles can be defined, granting varying levels of access and control over the data.
